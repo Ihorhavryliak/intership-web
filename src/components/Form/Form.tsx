@@ -28,7 +28,7 @@ export const Form = () => {
           <h1> Thank you for your request!</h1>
         </div>
       ) : (
-        <span className="z__index__6 position__relative">
+        <form onSubmit={onSendMessage} className="z__index__6 position__relative">
           <h1 className="h1__bold">Reach out to us!</h1>
           {/*     name */}
           <div>
@@ -69,11 +69,11 @@ export const Form = () => {
           )}
           {/* button */}
           <div>
-            <button className="btn" onClick={onSendMessage}>
+            <button className="btn" >
               Send message
             </button>
           </div>
-        </span>
+        </form>
       )}
     </>
   );
