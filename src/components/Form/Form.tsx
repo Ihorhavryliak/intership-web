@@ -14,7 +14,8 @@ export const Form = () => {
   const [message, setMessage] = useState("");
 
   const [validation, setValidation] = useState("");
-  const onSendMessage = () => {
+  const onSendMessage = (value: React.FormEvent<HTMLFormElement>) => {
+    value.preventDefault();
     if (name.length === 0 || email.length === 0 || message.length === 0) {
       return setValidation("All field require");
     }
